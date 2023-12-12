@@ -1,0 +1,124 @@
+import java.text.*;
+
+public class dog{
+
+  // Instantiated Variables
+
+  private String      name; // Name of the dog
+  private int         age; // Age of the dog
+  private String      breed; // Breed of the dog
+  private int         weightP; // Weight in pounds of dog
+  private static int  dogCount = 0; // Amount of dogs
+
+  // End of Instantiated Vars
+
+
+  // Constructors
+
+    // Zero-Arg Constructor 
+
+    public dog(){
+
+      name = "";
+      age = 0;
+      breed = "";
+      weightP = 0;
+      dogCount++;
+
+    }
+
+    // End of Zero-Arg Constructor
+
+  public dog(String Name, int Age, String Breed, int WeightP){
+
+    this.name = Name;
+    this.age = Age;
+    this.breed = Breed;
+    this.weightP = WeightP;
+    dogCount++;
+
+  }
+
+  // End of Constructors
+
+
+  // toString
+
+    public String toString(){ // All needed descriptors of the dog are placed here
+
+      String result = "Name: " + name +
+                      "\nAge: " + age + 
+                      "\nBreed: " + breed +
+                      "\nWeight: " + weightP + " pounds";
+
+      return result;
+
+    }
+
+  // end of toString
+
+
+  // Setters & Getters
+
+    // Setters... I guess there are no setters needed
+
+
+  
+    // end of Setters... Not that there really was a start
+
+  
+    // Getters
+
+      public String getName(){ // Getter for name
+
+        return name;
+        
+      }
+
+      public int getAge(){ // Getter for age
+
+        return age;
+        
+      }
+
+      public String getBreed(){ // Getter for breed
+
+        return breed;
+        
+      }
+
+      public int getWeightP(){ // Getter for Weight in pounds
+
+        return weightP;
+        
+      }
+
+      static public int getDogCount(){ // Getter for amount of dogs
+
+        return dogCount;
+        
+      }
+  
+    // End of Getters
+  
+
+  // End of Setters & Getters 
+
+
+  // Brain Methods
+
+  public String pToK(){ // Pounds to Kilograms
+
+    double weightK;
+    
+    DecimalFormat myFormat = new DecimalFormat("#.##");
+
+    weightK = weightP * 0.453592;
+
+    return myFormat.format(weightK);
+
+  }
+
+  // End of Brain Methods
+
+}
