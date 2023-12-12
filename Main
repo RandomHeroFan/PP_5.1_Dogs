@@ -1,0 +1,34 @@
+import java.text.*;
+
+class Main {
+  public static void main(String[] args) {
+    
+    student ATuring254 = new student("Alan Turing", "Big Al", 191245, 3.56, true);
+    student FNightinggale010 = new student("Florence Nightingale", "" , 182010, 3.89, false);
+    student GHopper692 = new student("Grace Hopper", "Queen Bee", 190692, 3.99, true);
+
+    ATuring254.setGpa(ATuring254.CSgpa());
+    FNightinggale010.setGpa(FNightinggale010.CSgpa());
+    GHopper692.setGpa(GHopper692.CSgpa());
+    
+    System.out.println(ATuring254.toString());
+
+    FNightinggale010.setNickname("Flo-No");
+    FNightinggale010.setGpa(3.92);
+    
+    System.out.println("\nFlorence's Nickname: " + FNightinggale010.getNickname() + 
+                        " GPA:"+ FNightinggale010.getGpa());
+
+    System.out.println("Name: " + GHopper692.getFName() + " Cs Class Status: " + GHopper692.getCS());
+    
+    System.out.println("\n" + ATuring254.createID());
+    System.out.println(FNightinggale010.createID());
+    System.out.println(GHopper692.createID());
+
+    System.out.println("\nAlan: " + ATuring254.getGpa());
+    System.out.println("Florence: " + FNightinggale010.getGpa());
+    System.out.print("Grace: " + GHopper692.getGpa());
+  }
+}
+
+
